@@ -13,7 +13,7 @@ func (p produto) precoComDesconto() (retorno float64) {
 	return
 }
 
-func (p produto) cu(palavra string, valor int) (flood string) {
+func (p produto) flood(palavra string, valor int) (flood string) {
 	for i := 1; i <= valor; i++ {
 		flood += palavra
 	}
@@ -33,5 +33,5 @@ func main() {
 	}
 
 	fmt.Println(produto1, produto1.precoComDesconto())
-	fmt.Println(produto2, produto2.precoComDesconto(), produto2.cu("jonas", 5))
+	fmt.Println(produto2, produto2.precoComDesconto(), produto2.flood("jonas", 5))
 }
